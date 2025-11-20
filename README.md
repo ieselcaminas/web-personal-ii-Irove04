@@ -1,2 +1,2 @@
-# repositorio
-Template para iniciar un proyecto en blanco
+# Curriculum
+Esta pagina es un curriculum
