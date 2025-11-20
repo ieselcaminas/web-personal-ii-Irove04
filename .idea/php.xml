@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/composer" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/curriculum-cristina/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/composer" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/polyfill-php84" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/blog-cristina/vendor/symfony/web-profiler-bundle" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/blog-cristina/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
