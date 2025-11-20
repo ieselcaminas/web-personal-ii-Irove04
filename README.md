@@ -1,6 +1,6 @@
 # Blog
-Esta pagina es un blog que cuenta con login
-Trata del estilo frutiger aero
+Esta pagina es un blog que cuenta con login.
+Trata del estilo frutiger aero.
 
 ## Plantilla
 Puedes ver o descargar la plantilla base aquí:  
