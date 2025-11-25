@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    {% block stylesheets %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+</head>
+<body>
+<center>
+    <div class="main_block">
+        {# Incluimos la navegación #}
+        {{ include('partials/_navigation.html.twig') }}
+
+        {# Contenido variable #}
+        {% block body %}{% endblock %}
+
+        {# Footer #}
+        <div class="footer">
+            <span class="fp_copy" style="margin-left:100px;">
+                2008 Copyright, All rights reserved.
+                <a href="http://www.buytemplates.net/CSS-XHTML-web-templates.aspx">
+                    Css/XHTML template
+                </a> designed by buytemplates.net
+            </span>
+        </div>
+    </div>
+</center>
+</body>
+</html>

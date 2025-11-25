@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sistemas Operativos: Historia y Evolución{% endblock %}
+
+{% block body %}
+    <div class="center">
+        <div class="center1">
+            <img src="images/cp_img1.gif" alt="" width="86" height="82" class="cp_img1"/>
+            <span class="cp_text1">
+                            <h2 class="cp_title">Windows XP y Windows 7: Dos Clásicos de Microsoft</h2>
+                Windows XP y Windows 7 representan dos momentos clave en la evolución de los sistemas operativos
+                de Microsoft. Ambos influyeron de manera profunda en la experiencia del usuario y en la adopción
+                masiva del ordenador personal en hogares y empresas.
+            </span>
+
+            <a href="{{ path('single_post1') }}">
+                <img src="images/cp_read.gif" alt="Read More" width="91" height="16" class="cp_read"/>
+            </a>
+
+            <img src="images/cp_bar1.gif" alt="" width="451" height="1" class="cp_bar1"/>
+
+            <img src="images/cp_img2.gif" alt="" width="79" height="76" class="cp_img2"/>
+
+            <span class="cp_text1">
+                            <h2 class="cp_title">macOS y la Era Macintosh: El Diseño como Identidad</h2>
+                La historia de Apple está marcada por el papel de los primeros Macintosh y la evolución hacia macOS.
+                Desde sus inicios, la compañía apostó por un entorno intuitivo, visualmente coherente y orientado
+                a la creatividad, consolidando una identidad que aún hoy define sus productos.
+            </span>
+
+            <a href="{{ path('single_post2') }}">
+                <img src="images/cp_read.gif" alt="Read More" width="91" height="16" class="cp_read"/>
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="rp_block1">
+                <span style="float:left;">
+                    <img src="images/rp_img1.gif" alt="" width="35" height="35" class="rp_img1"/>
+                    <img src="images/rp_solution.gif" alt="" width="145" height="16" class="rp_sol"/>
+                </span>
+                <span class="rp_list1">
+                    <img src="images/rp_blt.gif" alt="" width="3" height="3"/> <a href="{{ path('about') }}">Historia de Sistemas Operativos</a>
+                    <img src="images/rp_blt.gif" alt="" width="3" height="3"/> <a href="{{ path('about') }}">Microsoft Windows</a>
+                    <img src="images/rp_blt.gif" alt="" width="3" height="3"/> <a href="{{ path('about') }}">Apple y macOS</a>
+                    <img src="images/rp_blt.gif" alt="" width="3" height="3"/> <a href="{{ path('about') }}">Arquitecturas de Sistema</a>
+                    <img src="images/rp_blt.gif" alt="" width="3" height="3"/> <a href="{{ path('about') }}">Software y Tecnología</a>
+                </span>
+            </div>
+
+            <div class="rp_block2">
+                <span style="float:left;">
+                    <img src="images/rp_img2.gif" alt="" width="51" height="37" class="rp_img2"/>
+                    <img src="images/rp_login.gif" alt="" width="151" height="23" class="rp_login"/>
+                </span>
+                <span class="cp_email">Email</span>
+                <input type="text" class="rp_tbox1"/>
+                <span style="float:left; width:249px;">
+                    <span class="cp_pwd1">Password</span>
+                    <input type="text" class="rp_tbox2"/>
+                    <a href="{{ path('about') }}"><img src="images/rp_arrow.gif" alt="" width="24" height="20" class="rp_arrow"/></a>
+                </span>
+            </div>
+
+            <div class="rp_block3">
+                <span style="float:left;">
+                    <img src="images/rp_img3.gif" alt="" width="46" height="40" class="rp_img3"/>
+                    <img src="images/rp_client.gif" alt="" width="141" height="20" class="rp_client"/>
+                </span>
+                <span class="rp_text1"> "Los sistemas operativos evolucionan para mejorar la experiencia del usuario y adaptarse a las nuevas necesidades tecnológicas." </span>
+                <span class="rp_author">- Equipo Editorial</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
