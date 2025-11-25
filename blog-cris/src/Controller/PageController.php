@@ -31,4 +31,10 @@ final class PageController extends AbstractController
     {
         return $this->render('page/single_post2.html.twig');
     }
+
+    #[Route('/contacto', name: 'contacto')]
+    public function contacto(): Response
+    {
+        return $this->render('page/contacto.html.twig');
+    }
 }

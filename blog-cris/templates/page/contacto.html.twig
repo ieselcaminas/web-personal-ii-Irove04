@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block body %}
+    <div class="center">
+        <div class="center1">
+            <h1 class="post_title">Contáctame</h1>
+            <p>
+                Si quieres enviarme un mensaje, pregunta o sugerencia, rellena el formulario
+                y te responderé lo antes posible.
+            </p>
+
+            <form action="/contact" method="POST">
+                <label for="name" class="cp_title">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="email" class="cp_title">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+                <label for="subject" class="cp_title">Asunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+
+                <label for="message" class="cp_title">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." rows="6" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
