@@ -1,13 +1,13 @@
-{# Partial de navegación #}
+{# Partial </div>de navegación #}
 <div class="header1">
     <div class="header2">
-        <a href="{{ path('index') }}"><img src="images/logo.gif" alt="Logo" width="295" height="64" class="logo" /></a>
+        <a href="{{ path('index') }}"><img class="logo-image" src="images/logo.png" alt="Logo" width="300" height="320" class="logo" /></a>
     </div>
 </div>
 
 <div class="hd_menu">
     <a href="{{ path('index') }}" class="{{ app.request.attributes.get('_route') == 'index' ? 'active' : '' }}" style="margin-left:40px;">home</a>
-    <img src="images/menu_blt.gif" alt="" width="14" height="15"/>
+    <img src="images/menu_blt.jpg" alt="" width="14" height="15"/>
     <a href="{{ path('about') }}" class="{{ app.request.attributes.get('_route') == 'about' ? 'active' : '' }}">about us</a>
-    <img src="images/menu_blt.gif" alt="" width="14" height="15"/>
+    <img src="images/menu_blt.jpg" alt="" width="14" height="15"/>
 </div>

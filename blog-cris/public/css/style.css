@@ -9,13 +9,14 @@ img{float:left; border:0;}
 input{margin:0; padding:0;}
 
 .cp_title{color: #0c6c0c; !important;}
-.post_title{color: #ad2828; !important;}
+.post_title{color: #287aad; !important;}
+.logo-image{display: block; !important}
 
 .fltr{float:right;}
 
 .header1,.header2{float:left; width:736px; height:267px; background:url(../images/header1.jpg) no-repeat left;}
 
-.header2{float:left; background:url(../images/header2.jpg) no-repeat right;}
+.header2{display: flex;  justify-content: center; align-items: center; height: 267px; background:url(../images/header2.jpg) no-repeat right;}
 
 .smal_menu{float:left; display:inline; width:210px; margin-left:520px;}
 
@@ -25,7 +26,7 @@ input{margin:0; padding:0;}
 
 .logo{margin:172px 0 0 414px;}
 
-.hd_menu{float:left; width:736px; background:url(../images/menu_tile.gif) repeat-x; padding-bottom:25px;}
+.hd_menu{float:left; width:736px; background:url(../images/menu_tile.jpg) repeat-x; padding-bottom:25px;}
 
 .hd_menu a{float:left; color:#FFF; margin:21px 17px 0 17px; font:bold 15px Georgia, "Times New Roman", Times, serif; font-style:italic; text-decoration:none;} 
 
@@ -43,7 +44,7 @@ input{margin:0; padding:0;}
 
 .cp_text1{float:left; width:325px; margin:37px 0 0 31px; color:#5F5F5F;}
 
-.cp_text1 a{color:#BD2E12; text-decoration:none;}
+.cp_text1 a{color: #1281bd; text-decoration:none;}
 
 .cp_read{float:left; margin:7px 0 0 128px;}
 
@@ -91,9 +92,9 @@ input{margin:0; padding:0;}
 
 .rp_author{float:left; margin:13px 0 0 141px; color:#980905;}
 
-.footer{float:left; display:inline; width:736px; margin-top:6px; background:url(../images/fp_tile.gif) repeat-x; padding-bottom:5px;}
+.footer{float:left; display:inline; width:736px; margin-top:6px; background:url(../images/fp_tile.jpg) repeat-x; padding-bottom:5px;}
 
-.fp_menu{float:left; width:736px; background:url(../images/menu_tile.gif) #C8140F repeat-x;}
+.fp_menu{float:left; width:736px; background:url(../images/menu_tile.jpg) #C8140F repeat-x;}
 
 .fp_menu a{float:left; color:#FFF; margin:15px 17px 0 17px; font:bold 15px Georgia, "Times New Roman", Times, serif; font-style:italic; text-decoration:none;} 
 
