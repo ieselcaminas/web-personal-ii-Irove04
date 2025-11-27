@@ -54,7 +54,7 @@ input{margin:0; padding:0;}
 
 .cp_img2{float:left; margin:30px 0 0 15px;}
 
-.rp_block1{float:left; display:inline; width:249px; margin:5px 0 0 0; background-color:#C2C2A7; padding-bottom:18px;}
+.rp_block1{float:left; display:inline; height: 200px; width:249px; margin:5px 0 0 0; background-color:#C2C2A7; padding-bottom:18px;}
 
 .rp_img1{margin:18px 0 0 18px;}
 
@@ -66,7 +66,20 @@ input{margin:0; padding:0;}
 
 .rp_list1 img{margin:10px 7px 0 26px;}
 
-.rp_block2{float:left; display:inline; width:249px; margin:10px 0 0 0; background-color:#7F7F89; padding-bottom:20px;}
+.rp_block2{float:left; display:inline; height: 200px; width:249px; margin:10px 0 0 0; background-color:#7F7F89; padding-bottom:20px;}
+
+.register-header {
+    display: flex;           /* Activamos flex */
+    align-items: center;     /* Alinea verticalmente las imágenes */
+    justify-content: flex-start; /* Se alinean al inicio horizontalmente */
+    gap: 10px;               /* Espacio entre las dos imágenes */
+}
+
+/* Quitamos float de las imágenes dentro de este contenedor */
+.register-header img {
+    float: none;
+    display: block;
+}
 
 .rp_img2{margin:10px 0 0 18px;}
 
@@ -82,7 +95,7 @@ input{margin:0; padding:0;}
 
 .rp_arrow{margin:10px 0 0 9px;}
 
-.rp_block3{float:left; display:inline; width:249px; margin:11px 0 0 0; background-color:#C4C4A3; padding-bottom:17px;}
+.rp_block3{float:left; display:inline; height: 140px ; width:249px; margin:11px 0 0 0; background-color:#C4C4A3; padding-bottom:17px;}
 
 .rp_img3{margin:7px 0 0 22px;}
 
