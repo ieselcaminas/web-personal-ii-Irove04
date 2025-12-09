@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galería de Imágenes{% endblock %}
+
+{% block body %}
+    <div class="center">
+        <div class="center1">
+            <h1 class="post_title">Galería de Imágenes: Nuestra Colección Visual</h1>
+
+            <p>
+                Bienvenido a la sección de imágenes. Aquí recopilamos
+                los recursos visuales más destacados de nuestro sistema.
+                Al igual que los sistemas operativos han evolucionado visualmente
+                desde Windows XP hasta la actualidad, nuestra galería busca
+                ofrecer una experiencia visual clara y organizada.
+            </p>
+
+            <h2 class="cp_title">Explora el contenido</h2>
+            <p>
+                A continuación encontrarás las imágenes disponibles organizadas
+                para su fácil visualización.
+            </p>
+
+            <h3 class="cp_title">Detalles de la galería:</h3>
+            <ul>
+                <li>
+                    Imágenes optimizadas para la web.
+                </li>
+                <li>
+                    Formatos compatibles con todos los navegadores.
+                </li>
+                <li>
+                    Visualización adaptada al diseño del sitio.
+                </li>
+            </ul>
+
+            <hr>
+
+            <div id="images">
+                <div class="row">
+                    {% for image in images|default([]) %}
+                        <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom: 20px;">
+                            <div class="thumbnail">
+                                <img src="{{ asset('images/' ~ image.filename) }}" alt="{{ image.name|default('Imagen') }}" style="width: 100%; height: auto;">
+                                <div class="caption">
+                                    <h4 style="margin-top: 10px;">{{ image.title|default('Sin título') }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="col-xs-12">
+                            <p style="background: #f9f9f9; padding: 15px; border-left: 5px solid #ccc;">
+                                No hay imágenes disponibles para mostrar en este momento.
+                            </p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
