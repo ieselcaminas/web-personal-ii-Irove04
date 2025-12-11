@@ -33,7 +33,7 @@ security:
     access_control:
         - { path: ^/single_post1, roles: ROLE_USER }
         - { path: ^/single_post2, roles: ROLE_USER }
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

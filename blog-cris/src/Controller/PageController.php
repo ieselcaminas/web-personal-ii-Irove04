@@ -61,4 +61,11 @@ final class PageController extends AbstractController
     {
         return $this->render('page/contacto.html.twig');
     }
+
+    #[Route('/admin/images', name: 'images')]
+    public function images(): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        return $this->render('admin/images.html.twig');
+    }
 }
