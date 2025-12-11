@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\User;
+use App\Form\CategoryFormType;
 use App\Form\RegistrationFormType;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -68,4 +71,31 @@ final class PageController extends AbstractController
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
         return $this->render('admin/images.html.twig');
     }
+
+    #[Route('/admin/categories', name: 'app_categories')]
+    public function categories(ManagerRegistry $doctrine, Request $request): Response
+    {
+        $repositorio = $doctrine->getRepository(Category::class);
+        $categories = $repositorio->findAll();
+
+        $category = new Category();
+        $form = $this->createForm(CategoryFormType::class, $category);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $doctrine->getManager();
+            $entityManager->persist($category);
+            $entityManager->flush();
+
+            // MUY IMPORTANTE SIS
+            return $this->redirectToRoute('app_categories');
+        }
+
+        return $this->render('admin/categories.html.twig', [
+            'form' => $form->createView(),
+            'categories' => $categories
+        ]);
+    }
+
+
 }

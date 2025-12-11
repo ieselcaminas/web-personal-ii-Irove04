@@ -6,6 +6,7 @@ use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class CategoryFormType extends AbstractType
 {
@@ -13,6 +14,10 @@ class CategoryFormType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('guardar', SubmitType::class, [
+                'label' => 'Guardar categoría',
+                'attr' => ['class' => 'btn btn-success mt-3']
+            ])
         ;
     }
 
