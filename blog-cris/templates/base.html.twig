@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/style.css') }}" rel="stylesheet" type="text/css" />
     {% block stylesheets %}{% endblock %}
     {% block javascripts %}{% endblock %}
 </head>
