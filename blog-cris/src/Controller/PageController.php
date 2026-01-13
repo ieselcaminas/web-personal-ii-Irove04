@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Core\Security;
+use App\Entity\Image;
 
 final class PageController extends AbstractController
 {
@@ -95,7 +96,18 @@ final class PageController extends AbstractController
             'form' => $form->createView(),
             'categories' => $categories
         ]);
-    }
 
+    }
+    // En PageController.php o ImagenController.php
+    #[Route('/admin/list_images', name: 'list_images')]
+    public function listaimages(ManagerRegistry $doctrine): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $images = $doctrine->getRepository(Image::class)->findAll();
+
+        return $this->render('admin/list_images.html.twig', [
+            'images' => $images,
+        ]);
+    }
 
 }

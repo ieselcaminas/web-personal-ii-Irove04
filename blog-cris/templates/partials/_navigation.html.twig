@@ -11,5 +11,6 @@
     <a href="{{ path('about') }}" class="{{ app.request.attributes.get('_route') == 'about' ? 'active' : '' }}">about us</a>
     <img src="{{ asset('images/menu_blt.jpg') }}" alt="" width="14" height="15"/>
     <a href="{{ path('images') }}" class="{{ app.request.attributes.get('_route') == 'images' ? 'active' : '' }}">images</a>
+    <a href="{{ path('list_images') }}" class="{{ app.request.attributes.get('_route') == 'list_images' ? 'active' : '' }}">list images</a>
 
 </div>
