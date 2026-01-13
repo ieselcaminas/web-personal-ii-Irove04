@@ -31,9 +31,12 @@
 
                             {# Botones de acción opcionales #}
                             <div style="margin-top: 10px;">
-                                <a href="#" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="#" class="btn btn-sm btn-danger" style="color: red; margin-left: 10px;">Eliminar</a>
-                            </div>
+                                <a href="{{ path('delete_image', {'id': image.id}) }}"
+                                   class="btn btn-sm btn-danger"
+                                   style="color: red;"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar esta imagen?');">
+                                    Eliminar
+                                </a>                            </div>
                         </div>
                     </div>
                 {% else %}

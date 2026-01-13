@@ -98,7 +98,7 @@ final class PageController extends AbstractController
         ]);
 
     }
-    // En PageController.php o ImagenController.php
+
     #[Route('/admin/list_images', name: 'list_images')]
     public function listaimages(ManagerRegistry $doctrine): Response
     {
@@ -110,4 +110,22 @@ final class PageController extends AbstractController
         ]);
     }
 
+    #[Route('/admin/delete_image/{id}', name: 'delete_image')]
+    public function deleteImage(Image $image, ManagerRegistry $doctrine): Response
+    {
+        // 1. Verificamos seguridad
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        // 2. Obtenemos el manager de Doctrine y eliminamos la entidad
+        $entityManager = $doctrine->getManager();
+        $entityManager->remove($image);
+        $entityManager = $doctrine->getManager();
+        $entityManager->flush();
+
+        // 3. (Opcional) Mensaje de confirmación para el usuario
+        $this->addFlash('success', 'Imagen eliminada correctamente.');
+
+        // 4. Redirigimos de vuelta a la lista
+        return $this->redirectToRoute('list_images');
+    }
 }
