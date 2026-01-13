@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/curriculum-cristina/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/curriculum-cristina/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/blog-cris/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/blog-cris/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/curriculum-cristina/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/curriculum-cristina/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/curriculum-cristina/vendor/psr/container" />
@@ -163,6 +165,8 @@
       <excludeFolder url="file://$MODULE_DIR$/blog-cris/vendor/symfony/security-csrf" />
       <excludeFolder url="file://$MODULE_DIR$/blog-cris/vendor/symfony/security-http" />
       <excludeFolder url="file://$MODULE_DIR$/blog-cris/vendor/symfony/validator" />
+      <excludeFolder url="file://$MODULE_DIR$/blog-cris/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/blog-cris/vendor/symfony/polyfill-intl-idn" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
