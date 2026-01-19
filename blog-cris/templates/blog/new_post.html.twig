@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear Nuevo Post - Sistemas Operativos{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .btn-windows {
+            background-color: #c0c0c0 !important;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff !important;
+            padding: 5px 15px !important;
+            font-family: "Tahoma", "sans-serif";
+            font-size: 12px;
+            color: #000 !important;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .btn-windows:active {
+            border-color: #808080 #ffffff #ffffff #808080 !important;
+            padding: 6px 14px 4px 16px !important;
+        }
+        .rp_tbox1 { color: #000 !important; background-color: #fff !important; }
+        .active { font-weight: bold; color: #fff !important; }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="center">
+        <div class="center1">
+            <img src="{{ asset('images/cp_img1.gif') }}" alt="" width="86" height="82" class="cp_img1"/>
+
+            <span class="cp_text1">
+                <h2 class="cp_title">Publicar una nueva entrada</h2>
+                Utiliza este formulario para añadir contenido al blog.
+            </span>
+
+            <div style="margin-top: 20px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <div style="margin-bottom: 15px;">
+                    <span class="cp_email" style="display: block; margin-bottom: 5px;">Título del Post</span>
+                    {{ form_widget(form.title, {'attr': {'class': 'rp_tbox1', 'style': 'width: 100%'}}) }}
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <span class="cp_email" style="display: block; margin-bottom: 5px;">Contenido</span>
+                    {{ form_widget(form.content, {'attr': {'class': 'rp_tbox1', 'style': 'width: 100%; height: 120px;'}}) }}
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <span class="cp_email" style="display: block; margin-bottom: 5px;">Imagen (URL)</span>
+                    {{ form_widget(form.image, {'attr': {'class': 'rp_tbox1', 'style': 'width: 100%'}}) }}
+                </div>
+                <div style="text-align: right;">
+                    <button type="submit" class="btn-windows">
+                        <span>PUBLICAR</span>
+                        <img src="{{ asset('images/rp_arrow.gif') }}" alt="Enviar" width="20" height="16" class="rp_arrow"/>
+                    </button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
