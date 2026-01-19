@@ -13,10 +13,21 @@ class PostRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        //parent::__construct($registry, Post::class);
-        $this->publishedAt = new \DateTime();
+        parent::__construct($registry, Post::class);
 
     }
+    /**
+     * Returns an array of Post objects
+     */
+    public function findAll(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.publishedAt', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 
     //    /**
     //     * @return Post[] Returns an array of Post objects

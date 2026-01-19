@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -66,11 +67,33 @@ final class BlogController extends AbstractController
             $entityManager->persist($post);
             $entityManager->flush();
 
-            return $this->redirectToRoute('index'); // Redirigir a la home tras éxito
-        }
+            return $this->redirectToRoute('single_post', ["slug" => $post->getSlug()]);        }
 
         return $this->render('blog/new_post.html.twig', [
             'form' => $form->createView()
         ]);
     }
+
+    #[Route('blog/single_post/{slug}', name: 'single_post')]
+    public function post(ManagerRegistry $doctrine, $slug): Response
+    {
+        $repositorio = $doctrine->getRepository(Post::class);
+        $post = $repositorio->findOneBy(["slug"=>$slug]);
+        return $this->render('blog/single_post.html.twig', [
+            'post' => $post,
+        ]);
+    }
+
+    #[Route('/blog/posts', name: 'posts')]
+    public function posts(PostRepository $repository): Response
+    {
+        // Usamos el repositorio directamente (inyectado)
+        $posts = $repository->findAll();
+
+        return $this->render('blog/posts.html.twig', [
+            'posts' => $posts,
+        ]);
+    }
+
+
 }

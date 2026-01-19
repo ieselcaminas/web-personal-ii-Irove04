@@ -22,8 +22,7 @@
     <img src="{{ asset('images/menu_blt.jpg') }}" alt="" width="14" height="15"/>
 
     <a href="{{ path('new_post') }}" class="{{ app.request.attributes.get('_route') == 'post' ? 'active' : '' }}">new post</a>
-
-{#    <a href="{{ path('posts') }}" class="{{ app.request.attributes.get('_route') == 'posts' ? 'active' : '' }}">posts</a>#}
     <img src="{{ asset('images/menu_blt.jpg') }}" alt="" width="14" height="15"/>
 
+    <a href="{{ path('posts') }}" class="{{ app.request.attributes.get('_route') == 'posts' ? 'active' : '' }}">posts</a>
 </div>

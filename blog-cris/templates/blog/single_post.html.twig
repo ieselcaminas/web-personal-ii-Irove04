@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ post ? post.title : 'Post no encontrado' }}{% endblock %}
+
+{% block body %}
+    <div class="center">
+        {% if not post %}
+            <div class="center1">
+                <h2 class="cp_title">404 - Post not found</h2>
+                <p style="color: #484848;">Lo sentimos, la entrada que buscas no existe.</p>
+                <a href="{{ path('index') }}" style="color: #00AEEF;">Volver al inicio</a>
+            </div>
+        {% else %}
+            <div class="center1">
+                {# Título del Post #}
+                <h2 class="cp_title">{{ post.title }}</h2>
+
+                {# Imagen del Post (Ajustada a tu ruta de gallery) #}
+                <div style="margin: 20px 0;">
+                    {# Verificamos si existe la imagen antes de intentar pintarla #}
+                    {% if post.image %}
+                        <img src="{{ asset('images/index/gallery/' ~ post.image) }}" alt="{{ post.title }}" style="max-width: 100%; border: 2px solid #2e6ab2;">
+                    {% endif %}
+                </div>
+
+                {# Datos del Autor y Fecha #}
+                <p style="color: #5e5e5e; font-size: 12px;">
+                    {# CAMBIO REALIZADO AQUÍ: Usamos .email en lugar de .name #}
+                    Publicado por: <strong>{{ post.postUser ? post.postUser.email : 'Usuario desconocido' }}</strong> |
+                    Fecha: {{ post.publishedAt | date('d') }} de {{ post.publishedAt | date('F') }}
+                </p>
+
+                <hr style="opacity: 0.2; margin: 20px 0;">
+
+                {# Contenido del Post #}
+                <div style="color: #252525; line-height: 1.6; text-align: justify;">
+                    {{ post.content | nl2br }}
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="{{ path('index') }}" class="btn-windows" style="text-decoration: none;">
+                        <span style="color: black;">< VOLVER</span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

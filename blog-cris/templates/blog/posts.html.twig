@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado de Posts{% endblock %}
+
+{% block body %}
+    <div class="center">
+        <div class="center1">
+            <h1 class="cp_title" style="margin-bottom: 30px;">Posts Generales</h1>
+
+            {% if posts is empty %}
+                <p style="color: white;">No hay publicaciones disponibles en este momento.</p>
+            {% else %}
+                <div class="posts-grid" style="display: flex; flex-direction: column; gap: 40px;">
+                    {% for post in posts %}
+                        <article style="border: 2px solid #fff; padding: 20px; text-align: left; background: rgba(0,0,0,0.5);">
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+                                {# Miniatura de la imagen #}
+                                {% if post.image %}
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <img src="{{ asset('images/index/gallery/' ~ post.image) }}"
+                                             alt="{{ post.title }}"
+                                             style="width: 100%; height: 150px; object-fit: cover; border: 1px solid #fff;">
+                                    </div>
+                                {% endif %}
+
+                                {# Información del Post #}
+                                <div style="flex: 2; min-width: 250px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <h2 style="margin-top: 0;">
+                                            <a href="{{ path('single_post', {slug: post.slug}) }}" style="color: #00AEEF; text-decoration: none;">
+                                                {{ post.title }}
+                                            </a>
+                                        </h2>
+                                        <p style="color: #ccc; font-size: 12px;">
+                                            Por: <strong>{{ post.postUser ? post.postUser.email : 'Anónimo' }}</strong> |
+                                            {{ post.publishedAt | date('d/m/Y') }}
+                                        </p>
+                                        <p style="color: white;">
+                                            {{ post.content | slice(0, 150) }}...
+                                        </p>
+                                    </div>
+
+                                    <div style="margin-top: 15px;">
+                                        <a href="{{ path('single_post', {slug: post.slug}) }}" class="btn-windows" style="text-decoration: none; display: inline-block;">
+                                        <span style="color: black; font-weight: bold; padding: 5px 10px; background: #eee; border: 2px solid #999;">
+                                            LEER MÁS >
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div style="margin-top: 40px;">
+                <a href="{{ path('index') }}" style="color: #00AEEF;">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
