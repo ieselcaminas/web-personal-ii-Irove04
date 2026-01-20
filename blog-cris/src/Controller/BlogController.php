@@ -77,12 +77,15 @@ final class BlogController extends AbstractController
     #[Route('blog/single_post/{slug}', name: 'single_post')]
     public function post(ManagerRegistry $doctrine, $slug): Response
     {
-        $repositorio = $doctrine->getRepository(Post::class);
-        $post = $repositorio->findOneBy(["slug"=>$slug]);
+        $repository = $doctrine->getRepository(Post::class);
+        $post = $repository->findOneBy(["slug"=>$slug]);
+        $recents = $repository->findRecents();
         return $this->render('blog/single_post.html.twig', [
             'post' => $post,
+            'recents' => $recents
         ]);
     }
+
 
     #[Route('/blog/posts', name: 'posts')]
     public function posts(PostRepository $repository): Response

@@ -27,6 +27,15 @@ class PostRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+    Public function findRecents(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.publishedAt', 'DESC')
+            ->setMaxResults(5)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 
 
     //    /**
