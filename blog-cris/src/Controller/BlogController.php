@@ -91,7 +91,7 @@ final class BlogController extends AbstractController
     #[Route('/blog/posts', name: 'posts')]
     public function posts(PostRepository $repository): Response
     {
-        // Usamos el repositorio directamente (inyectado)
+        // Usamos el repositorio directamente
         $posts = $repository->findAll();
 
         return $this->render('blog/posts.html.twig', [
